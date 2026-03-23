@@ -1,0 +1,24 @@
+# This is a placeholder workflow
+# 
+# The actual releases for this repository are created via workflow_dispatch
+# from the private source repository (allansantos-dv/remote-vscode).
+#
+# The release workflow in the private repo builds the daemon and Android app,
+# then creates releases in this public repository using the GitHub CLI.
+#
+# This approach keeps the source code private while making the binaries
+# publicly available for download.
+
+name: Placeholder
+
+on:
+  workflow_dispatch:
+
+jobs:
+  placeholder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Info
+        run: |
+          echo "This is a placeholder workflow."
+          echo "Releases are created from the private source repository."
